@@ -1,0 +1,1 @@
+java -jar openapi-generator-cli.jar generate -i openapi.yaml -g jaxrs-spec -o java-server/
