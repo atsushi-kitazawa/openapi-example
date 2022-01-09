@@ -51,7 +51,7 @@ public class FilesApi {
         };
         return Response
                 .ok(fileStream, MediaType.APPLICATION_OCTET_STREAM)
-                .header("content-disposition", "attachment; filename = " + fileId)
+                .header("content-disposition", "attachment; filename=" + fileId)
                 .build();
     }
 

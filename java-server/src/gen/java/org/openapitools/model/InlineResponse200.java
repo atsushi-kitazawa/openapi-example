@@ -1,22 +1,18 @@
 package org.openapitools.model;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import javax.validation.constraints.*;
+import java.util.Objects;
+
 import javax.validation.Valid;
 
-import io.swagger.annotations.*;
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
-
+import io.swagger.annotations.ApiModelProperty;
 
 @JsonTypeName("inline_response_200")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2022-01-09T11:53:45.153+09:00[Asia/Tokyo]")public class InlineResponse200   {
-  
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2022-01-09T11:53:45.153+09:00[Asia/Tokyo]")
+public class InlineResponse200 {
+
   private @Valid Long id;
   private @Valid String name;
 
@@ -27,9 +23,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
     return this;
   }
 
-  
-
-  
   @ApiModelProperty(example = "4", value = "")
   @JsonProperty("id")
   public Long getId() {
@@ -41,16 +34,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
     this.id = id;
   }
 
-/**
+  /**
    **/
   public InlineResponse200 name(String name) {
     this.name = name;
     return this;
   }
 
-  
-
-  
   @ApiModelProperty(example = "Jessica Smith", value = "")
   @JsonProperty("name")
   public String getName() {
@@ -61,7 +51,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   public void setName(String name) {
     this.name = name;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -85,7 +74,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse200 {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
@@ -103,6 +92,4 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
     return o.toString().replace("\n", "\n    ");
   }
 
-
 }
-

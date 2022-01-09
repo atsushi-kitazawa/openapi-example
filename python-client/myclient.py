@@ -8,17 +8,19 @@ configuration = openapi_client.Configuration(
     host = "http://localhost:8080/myapp"
 )
 
-
-
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration, header_name="Accept", header_value="application/*") as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     
     try:
-        # Returns a list of users.
-        # api_response = api_instance.users_get()
+        api_response = api_instance.users_get()
+        pprint(api_response)
+
+        api_response = api_instance.users_user_id_get(1)
+        pprint(api_response)
+
         api_response = api_instance.download("download_file")
-        # pprint(api_response)
+        pprint(api_response)
     except openapi_client.ApiException as e:
         print("Exception when calling DefaultApi: %s\n" % e)
