@@ -17,7 +17,8 @@ with openapi_client.ApiClient(configuration) as api_client:
     
     try:
         # Returns a list of users.
-        api_response = api_instance.users_get()
-        pprint(api_response)
+        # api_response = api_instance.users_get()
+        api_response = api_instance.download("download_file")
+        # pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling DefaultApi->users_get: %s\n" % e)
+        print("Exception when calling DefaultApi: %s\n" % e)

@@ -1,4 +1,6 @@
 README.md
+src/gen/java/org/openapitools/api/FilesApi.java
 src/gen/java/org/openapitools/api/RestApplication.java
 src/gen/java/org/openapitools/api/UsersApi.java
+src/gen/java/org/openapitools/model/InlineResponse200.java
 src/main/openapi/openapi.yaml

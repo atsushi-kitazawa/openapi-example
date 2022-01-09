@@ -50,6 +50,7 @@ import time
 import openapi_client
 from pprint import pprint
 from openapi_client.api import default_api
+from openapi_client.model.inline_response200 import InlineResponse200
 # Defining the host is optional and defaults to http://localhost:8080/myapp
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -62,13 +63,13 @@ configuration = openapi_client.Configuration(
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
-    
+    file_id = "fileId_example" # str | The ID of the download file to return.
+
     try:
-        # Returns a list of users.
-        api_response = api_instance.users_get()
+        api_response = api_instance.download(file_id)
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling DefaultApi->users_get: %s\n" % e)
+        print("Exception when calling DefaultApi->download: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -77,11 +78,15 @@ All URIs are relative to *http://localhost:8080/myapp*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**download**](docs/DefaultApi.md#download) | **GET** /files/download/{fileId} | 
+*DefaultApi* | [**files_get**](docs/DefaultApi.md#files_get) | **GET** /files | Returns a list of files.
 *DefaultApi* | [**users_get**](docs/DefaultApi.md#users_get) | **GET** /users | Returns a list of users.
+*DefaultApi* | [**users_user_id_get**](docs/DefaultApi.md#users_user_id_get) | **GET** /users/{userId} | Returns a user by ID.
 
 
 ## Documentation For Models
 
+ - [InlineResponse200](docs/InlineResponse200.md)
 
 
 ## Documentation For Authorization
